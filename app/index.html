@@ -1,0 +1,255 @@
+ 
+<!DOCTYPE html>
+
+<html lang="es-ES" ng-app="ngCartDemo">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <title>Home - Thunder | Thunder</title>
+
+<!--CSS-->
+  <link rel='stylesheet' href='css/ngcart.css' type='text/css'  />
+
+<!--JAVASCRIPT Template-->
+  <script type='text/javascript' src='http://wpexplorer-demos.com/thunder/wp-includes/js/jquery/jquery.js'></script>
+  <script type='text/javascript' src='http://wpexplorer-demos.com/thunder/wp-includes/js/jquery/jquery-migrate.min.js'></script>
+  <script type='text/javascript' src='http://wpexplorer-demos.com/thunder/wp-content/plugins/go_pricing/assets/js/go_pricing_scripts.js'></script>
+  <script type='text/javascript' src='http://wpexplorer-demos.com/thunder/wp-content/plugins/layerslider/static/js/layerslider.kreaturamedia.jquery.js'></script>
+  <script type='text/javascript' src='http://wpexplorer-demos.com/thunder/wp-content/plugins/layerslider/static/js/greensock.js'></script>
+  <script type='text/javascript' src='http://wpexplorer-demos.com/thunder/wp-content/plugins/layerslider/static/js/layerslider.transitions.js'></script>
+  <script type='text/javascript' src='http://wpexplorer-demos.com/thunder/wp-content/plugins/revslider/rs-plugin/js/jquery.themepunch.tools.min.js?rev=4.6.0'></script>
+  <script type='text/javascript' src='http://wpexplorer-demos.com/thunder/wp-content/plugins/revslider/rs-plugin/js/jquery.themepunch.revolution.min.js?rev=4.6.0'></script>
+
+  <!-- <link rel='stylesheet' href='app/bower_components/bootstrap/dist/css/bootstrap.css' type='text/css'/> -->
+</head>
+
+<!-- Begin Body -->
+<body>
+    <div id="wrap" class="clr">   
+      <!-- Header  -->
+        <header id="masthead" class="site-header clr fixed-scroll" role="banner">
+            <div id="masthead-inner" class="container clr">
+                <div class="logo">
+                  <h1><a class="navbar-brand" ui-sref="site.index"></a><span class="logo-icon"><i class="icon-bolt"></i></span>Thunder</a></h1>
+                                            
+                </div><!-- .logo -->
+                <div  id="navbar" class="clr">
+                  <nav id="site-navigation" class="navigation main-navigation clr" role="navigation">
+                    <div class="menu-main-container">
+                      <ul id="menu-main" class="nav-menu dropdown-menu">
+                        <li ng-class="{ active: $state.is('site.home')}"  class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-69 current_page_item menu-item-has-children dropdown menu-item-9407">
+                          <a  ui-sref="site.home" >Home</a>
+                        </li>
+                        <li  id="menu-item-9151" class="portfolio-link menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children dropdown menu-item-9151">
+                          <a >Portfolio</a>
+                        </li>
+                        <li id="menu-item-9154" class="services-link menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children dropdown menu-item-9154">
+                          <a >Services</a>
+                        </li>
+                        <li id="menu-item-9157" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children dropdown menu-item-9157">
+                          <a href="">Pages</a>
+                        </li>
+                        <li id="menu-item-9164" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children dropdown menu-item-9164">
+                          <a href="">Features</a>
+                        </li>
+                        <li ng-class="{ active: $state.is('site.products')}"  id="menu-item-9420" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children dropdown menu-item-9420">
+                          <a ui-sref="site.products" >Shop</a>                      
+                        </li>
+                        <li id="menu-item-9159" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9159">
+                          <a href="">Blog</a></li>
+                        <li>
+                            <a ui-sref="site.cart" style="padding: 5px 0 0 0; ">
+                              <ngcart-summary></ngcart-summary>
+                            </a>        
+                        </li>
+                      </ul>
+                    </div>
+                  </nav><!-- #site-navigation -->
+                </div><!-- #navbar -->
+            </div><!-- #masthead-inner -->
+        </header><!-- #masthead-two<ngcart-addtocart -->
+ 
+        <div id="main" class="site-main clr">
+
+          <div>
+            <div ui-view></div>
+          </div>
+        
+        </div><!-- #main-content -->
+
+        <footer id="footer" class="site-footer">
+            <div id="footer-widgets" class="container row clr ">
+              <div class="footer-box span_1_of_4 col col-1">
+                <div class="footer-widget widget_text clr"><h6 class="widget-title"><span>Thunder</span></h6>
+                    <div class="textwidget">This theme is full of features that you can use to create the perfect website for you or your client.
+                    </div>
+                </div>
+                <div class="footer-widget widget_search clr">
+                    <form method="get" class="searchform" action="http://wpexplorer-demos.com/thunder/" role="search">
+                      <input type="search" class="field" name="s" value="" id="s" placeholder="Search..." />
+                    </form>
+                </div>                
+              </div><!-- .footer-box -->
+             <div class="footer-box span_1_of_4 col col-2">
+                  <div class="footer-widget widget_recent_entries clr">
+                      <h6 class="widget-title"><span>Recent Posts</span></h6>   
+                      <ul>
+                          <li>
+                            <a href="">Advertising Nutrition</a>
+                          </li>
+                          <li>
+                            <a href="">A Postcard From Georgia</a>
+                          </li>
+                          <li>
+                              <a href="">Marketing Strategy Experts</a>
+                          </li>
+                          <li>
+                              <a href="">Managing A New Campaign</a>
+                          </li>
+                          <li>
+                              <a href="">Audio Opportunities</a>
+                          </li>
+                      </ul>
+                  </div>        
+              </div><!-- .footer-box -->
+              <div class="footer-box span_1_of_4 col  col-3 ">
+                    <div class="footer-widget widget_nav_menu clr"><h6 class="widget-title"><span>Links</span></h6>
+                      <div class="menu-links-container">
+                        <ul id="menu-links" class="menu">
+                          <li id="menu-item-8741" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-8741">   <a href="">ThemeForest WordPress Themes</a>
+                          </li>
+                          <li id="menu-item-8744" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-8744">   <a href="">CodeCanyon WordPress Plugins</a>
+                          </li>
+                          <li id="menu-item-8742" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-8742">    <a href="">GraphicRiver Design Elements</a>
+                          </li>
+                          <li id="menu-item-8743" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-8743">     <a href="">PhotoDune Stock Images</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+              </div><!-- .footer-box -->
+              <div class="footer-box span_1_of_4 col  col-4">
+                  <div class="footer-widget widget_wpex_recent_posts_thumb_grid clr">
+                      <h6 class="widget-title"><span>Featured Work</span></h6>
+                      <ul class="wpex-recent-posts-thumb-grid clearfix">
+                          <li class="col-1">
+                            <a href="" title="Sunset Gallery">
+                                <img src="http://wpexplorer-demos.com/thunder/wp-content/uploads/sites/66/2013/05/girl22-150x150.jpg" alt="Sunset Gallery" />
+                            </a>
+                          </li>
+                          <li class="col-2">
+                            <a href="http://wpexplorer-demos.com/thunder/portfolio/barbed-wire/" title="Barbed Wire"><img src="http://wpexplorer-demos.com/thunder/wp-content/uploads/sites/66/2013/05/barbs-150x150.jpg" alt="Barbed Wire" />
+                            </a>
+                          </li>
+                          <li class="col-3">
+                            <a href="http://wpexplorer-demos.com/thunder/portfolio/stacking-florals/" title="Stacking Florals">   <img src="http://wpexplorer-demos.com/thunder/wp-content/uploads/sites/66/2013/05/floral-garden-150x150.jpg" alt="Stacking Florals" />
+                            </a>
+                          </li>
+                          <li class="col-1"><a href="http://wpexplorer-demos.com/thunder/portfolio/password-protected-gallery/" title="Protected: Password Protected Gallery"><img src="http://wpexplorer-demos.com/thunder/wp-content/uploads/sites/66/2013/05/girl2-150x150.jpg" alt="Protected: Password Protected Gallery" /></a></li>
+                          <li class="col-2">
+                            <a href="http://wpexplorer-demos.com/thunder/portfolio/behind-the-scenes/" title="Behind The Scenes">
+                              <img src="http://wpexplorer-demos.com/thunder/wp-content/uploads/sites/66/2013/07/georgia-150x150.png" alt="Behind The Scenes" />
+                            </a>
+                          </li>
+                          <li class="col-3">
+                            <a href="http://wpexplorer-demos.com/thunder/portfolio/venture-out/" title="Venture Out"><img src="http://wpexplorer-demos.com/thunder/wp-content/uploads/sites/66/2013/05/girl21-150x150.jpg" alt="Venture Out" />
+                            </a>
+                          </li>
+                      </ul>
+                  </div>
+              </div><!-- .footer-box -->
+            </div><!-- #footer-widgets -->
+        </footer><!-- #footer -->           
+           
+        <div id="footer-bottom" class="style-1 clr">
+          <div class="container row clr">
+            <div id="copyright" class="span_10 col clr-margin" role="contentinfo">
+              <p>Copyright 2015 &middot; <a href="http://wpexplorer-demos.com/thunder" title="Thunder">Thunder</a></p>
+            </div><!-- #copyright -->
+          <div id="footer-social" class="span_14 col">
+               <ul id="social" class="clr">
+                  <li class="twitter">
+                      <a href="http://www.twitter.com/" title="Follow Us" target="_blank">
+                        <img src="http://wpexplorer-demos.com/thunder/wp-content/themes/wpex-thunder/images/social/twitter.png" alt="Follow Us" />
+                      </a>
+                   </li>
+                   <li class="facebook">
+                      <a href="http://www.facebook.com/" title="Like Us" target="_blank">
+                        <img src="http://wpexplorer-demos.com/thunder/wp-content/themes/wpex-thunder/images/social/facebook.png" alt="Like Us" />
+                      </a>
+                    </li>
+                    <li class="dribbble">
+                      <a href="http://dribbble.com/" title="Dribbble" target="_blank">
+                        <img src="http://wpexplorer-demos.com/thunder/wp-content/themes/wpex-thunder/images/social/dribbble.png" alt="Dribbble" />
+                      </a>
+                    </li>
+                    <li class="behance">
+                      <a href="http://www.behance.net/" title="Behance" target="_blank">
+                        <img src="http://wpexplorer-demos.com/thunder/wp-content/themes/wpex-thunder/images/social/behance.png" alt="Behance" />
+                      </a>
+                    </li>
+                    <li class="linkedin">
+                      <a href="http://www.linkedin.com/" title="Connect" target="_blank">
+                        <img src="http://wpexplorer-demos.com/thunder/wp-content/themes/wpex-thunder/images/social/linkedin.png" alt="Connect" /></a>
+                    </li>
+                    <li class="pinterest">
+                      <a href="http://pinterest.com/" title="Pinterest" target="_blank">
+                        <img src="http://wpexplorer-demos.com/thunder/wp-content/themes/wpex-thunder/images/social/pinterest.png" alt="Pinterest" /></a>
+                    </li>
+                    <li class="tumblr">
+                      <a href="http://www.tumblr.com/" title="Tumblr" target="_blank">
+                        <img src="http://wpexplorer-demos.com/thunder/wp-content/themes/wpex-thunder/images/social/tumblr.png" alt="Tumblr" />
+                      </a>
+                    </li>
+                    <li class="vimeo">
+                      <a href="https://vimeo.com/" title="Vimeo" target="_blank">
+                        <img src="http://wpexplorer-demos.com/thunder/wp-content/themes/wpex-thunder/images/social/vimeo.png" alt="Vimeo" />
+                      </a>
+                    </li>
+                    <li class="youtube">
+                      <a href="http://www.youtube.com/" title="Our Youtube Channel" target="_blank">
+                        <img src="http://wpexplorer-demos.com/thunder/wp-content/themes/wpex-thunder/images/social/youtube.png" alt="Our Youtube Channel" />
+                      </a>
+                    </li>
+                    <li class="flickr">
+                      <a href="http://www.flickr.com/" title="Flickr" target="_blank">
+                        <img src="http://wpexplorer-demos.com/thunder/wp-content/themes/wpex-thunder/images/social/flickr.png" alt="Flickr" />
+                      </a>
+                    </li>
+                    <li class="forrst">
+                      <a href="http://forrst.com/posts" title="Forrst" target="_blank">
+                        <img src="http://wpexplorer-demos.com/thunder/wp-content/themes/wpex-thunder/images/social/forrst.png" alt="Forrst" />
+                      </a>
+                    </li>
+                    <li class="rss">
+                      <a href="http://feeds.feedburner.com/" title="Site Feed" target="_blank">
+                        <img src="http://wpexplorer-demos.com/thunder/wp-content/themes/wpex-thunder/images/social/rss.png" alt="Site Feed" />
+                      </a>
+                    </li>
+                </ul><!-- #social -->
+          </div><!-- #footer-social -->
+        </div><!-- .container -->
+    </div><!-- #footer-bottom -->
+</div><!-- #wrap -->
+
+<script type="text/javascript">jQuery(function(e){e(document).ready(function(){e("#bg-switcher-close").click(function(){e("#bg-switcher").animate({left:-200},200).addClass("hidden-switcher");e(this).hide();e("#bg-switcher-open").show();return false});e("#bg-switcher-open").click(function(){e("#bg-switcher").animate({left:0},200,function(){e("#bg-switcher").removeClass("hidden")});e(this).hide();e("#bg-switcher-close").show();return false});e("#layout-select").bind("change",function(){var t=e(this).val();if(t){window.location=t}return false});e("#header-select").bind("change",function(){var t=e(this).val();if(t=="reset"){e("body").removeClass("light-main-skin")}else{e("body").addClass(t)}return false});e("#prefefined-skins li").click(function(){e("body").removeClass("red-theme-skin black-theme-skin orange-theme-skin cobalt-blue-theme-skin light-green-theme-skin baby-blue-theme-skin purple-theme-skin pink-theme-skin cherry-theme-skin teal-theme-skin steel-theme-skin brown-theme-skin");e("#symple-switcher").remove();var t=e(this).data("color");if(t!=="reset"){e("body").addClass(t)}return false})})})</script><!-- DEMO BACKGROUND SWITCHER -->
+
+<script type='text/javascript'>
+/* <![CDATA[ */
+var wpexLocalize = {"responsiveMenuText":"Menu"};
+/* ]]> */
+</script>
+ <script type='text/javascript' src='http://wpexplorer-demos.com/thunder/wp-content/themes/wpex-thunder/js/global.js'></script> 
+
+<!--JAVASCRIPT ANGULAR-->
+<script src="bower_components/angular/angular.js"></script>
+<script src="bower_components/angular-resource/angular-resource.js"></script>
+<script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+<script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+<script src="bower_components/ngcart/src/ngCart.js"></script>
+<script src="bower_components/ngcart/src/ngCart.directives.js"></script>
+
+<script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h1>Cart</h1>
+            <ngcart-cart></ngcart-cart>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12 text-right"> 
+            <button class="btn btn-primary" ng-click="showCart()">Checkout</button>
+        </div>
+    </div>
+
+    <div class="row">
+
+        <div ng-show="total">
+         <h4>Purchase Result </h4>
+       <!-- <div class="col-md-12"> 
+    	   <em role="alert">
+    		  <span class="glyphicon glyphicon-thumbs-up"></span> See your console to browse
+    	   </em>
+        </div>--> 
+
+            <div class="alert alert-info" >
+                <!-- <pre>{{ checkout | json}}</pre> -->
+                You should pay  : {{ total | currency }}  and later with shipping !     
+            </div>        
+
+        </div>
+    </div>
+</div>
